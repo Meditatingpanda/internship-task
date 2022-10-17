@@ -1,7 +1,7 @@
 
 # internship task
 
-codes for the tasks
+for code reference check src/index.ts
 
 
 
