@@ -2,9 +2,7 @@
     "compilerOptions": {
         "lib": ["es6", "dom"],
         "module": "commonjs",
-        "target": "es5",
-
-        
+        "target": "es5", 
 
       }
 }
