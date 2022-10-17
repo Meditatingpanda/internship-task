@@ -25,15 +25,7 @@ const obj: dict = {
   "2020-01-06": 2,
   "2020-01-07": 4,
 };
-const obj2: dict2 = {
-  Mon: 0,
-  Tue: 0,
-  Wed: 0,
-  Thu: 0,
-  Fri: 0,
-  Sat: 0,
-  Sun: 0,
-};
+
 const returnDay = (day: number): string => {
   const days: string[] = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return days[day];
@@ -45,7 +37,16 @@ const findDay = (day: string): number => {
   return dt.getDay();
 };
 
-const helperFunction = (obj:dict): dict2 => {
+const helperFunction = (obj: dict): dict2 => {
+  const obj2: dict2 = {
+    Mon: 0,
+    Tue: 0,
+    Wed: 0,
+    Thu: 0,
+    Fri: 0,
+    Sat: 0,
+    Sun: 0,
+  };
   for (const key in obj) {
     const day = findDay(key);
     const dayName = returnDay(day);
@@ -66,8 +67,6 @@ const helperFunction = (obj:dict): dict2 => {
   return obj2;
 };
 helperFunction(obj);
-for (const key in obj2) {
-  console.log(key, obj2[key]);
-}
+
 
 export default helperFunction;

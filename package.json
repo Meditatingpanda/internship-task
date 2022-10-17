@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
+ 
   "scripts": {
     "test": "jest",
-    "start":"node"
+    "start":"ts-node src/index.ts"
   },
   "keywords": [],
   "author": "",

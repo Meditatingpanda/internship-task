@@ -9,7 +9,7 @@ test("should first", () => {
       "2020-01-06": 2,
       "2020-01-07": 4,
     })
-  ).toBe({
+  ).toStrictEqual({
     Mon: 2,
     Tue: 4,
     Wed: 6,
