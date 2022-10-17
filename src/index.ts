@@ -66,7 +66,7 @@ const helperFunction = (obj: dict): dict2 => {
   });
   return obj2;
 };
-helperFunction(obj);
+console.log(helperFunction(obj))
 
 
 export default helperFunction;
