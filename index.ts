@@ -5,26 +5,26 @@ interface dict2 {
   [key: string]: number;
 }
 //dictinary having all the days
-const obj: dict = {
-  "2020-01-01": 4,
-  "2020-01-02": 4,
-  "2020-01-03": 6,
-  "2020-01-04": 8,
-  "2020-01-05": 2,
-  "2020-01-06": -6,
-  "2020-01-07": 2,
-  "2020-01-08": -2,
-};
+// const obj: dict = {
+//   "2020-01-01": 4,
+//   "2020-01-02": 4,
+//   "2020-01-03": 6,
+//   "2020-01-04": 8,
+//   "2020-01-05": 2,
+//   "2020-01-06": -6,
+//   "2020-01-07": 2,
+//   "2020-01-08": -2,
+// };
 
 //dictionary having some days missing
 
-// const obj: dict = {
-//   "2020-01-01": 6,
-//   "2020-01-04": 12,
-//   "2020-01-05": 14,
-//   "2020-01-06": 2,
-//   "2020-01-07": 4,
-// };
+const obj: dict = {
+  "2020-01-01": 6,
+  "2020-01-04": 12,
+  "2020-01-05": 14,
+  "2020-01-06": 2,
+  "2020-01-07": 4,
+};
 const obj2: dict2 = {
   Mon: 0,
   Tue: 0,
@@ -52,6 +52,12 @@ const helperFunction = (): void => {
     obj2[dayName] += obj[key];
   }
   const keysOfObj2 = Object.keys(obj2);
+  const midPoint: number = Math.floor(keysOfObj2.length / 2);
+  if (obj2[keysOfObj2[midPoint]] === 0) {
+    obj2[keysOfObj2[midPoint]] =
+      (obj2[keysOfObj2[0]] + obj2[keysOfObj2[keysOfObj2.length - 1]]) / 2;
+  }
+
   keysOfObj2.forEach((key, i) => {
     if (obj2[key] === 0) {
       obj2[key] = (obj2[keysOfObj2[i - 1]] + obj2[keysOfObj2[i + 1]]) / 2;
